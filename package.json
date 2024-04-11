@@ -10,7 +10,9 @@
     "deploy:local": "dfx deploy --network=local",
     "deploy:ic": "dfx deploy --network=ic",
     "generate": "dfx generate e2e_tests_backend",
-    "test": "vitest"
+    "test": "vitest",
+    "ci": "vitest run",
+    "preci": "dfx stop; dfx start --clean --background; dfx deploy; dfx generate"
   },
   "dependencies": {
     "@dfinity/agent": "^1.2.0",
